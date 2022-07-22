@@ -7,36 +7,33 @@
     align-items: center;
 }
 
-.A{
-    background-image: url(https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-16.jpg);
-    background-position: center;    
+.box{
+    background-position: center;
+    background-size: cover;
+    flex: 1;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 2px solid black;
+    font-size: 25px;
 }
 
-.B{
-    background-image: url(https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg);
-    background-position: center;    
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    background-position: center;
-}
+.A{background-image: url(https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-16.jpg);}
 
-.C{
-    background-image: url(https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-23.jpg);
-    background-position: center;
-    height: 100%;
+.B{background-image: url(https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg);}
+
+.C{background-image: url(https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-23.jpg);}
+
+.box > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
-}
+  }
+  
+.box > *:first-child { transform: translateY(-100%); }
